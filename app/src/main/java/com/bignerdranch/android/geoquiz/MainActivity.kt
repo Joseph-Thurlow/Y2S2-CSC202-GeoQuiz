@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
         //Use the Toast class's setGravity function.
         trueButton.setOnClickListener { view: View ->
             Toast.makeText(this, R.string.correct_toast,
-                Toast.LENGTH_SHORT).show()
-            Toast.setGravity(Gravity.TOP)
+                Toast.LENGTH_SHORT).apply{ setGravity(Gravity.TOP, 0, 0); show()}
+
         }
         falseButton.setOnClickListener { view: View ->
             Toast.makeText(this, R.string.incorrect_toast,
-                Toast.LENGTH_SHORT).show()
+                Toast.LENGTH_SHORT).apply{ setGravity(Gravity.TOP, 0, 0); show()}
         }
     }
 }
